@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebo Online - Livraria da Mata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sebo Acadêmico</h1>
+        <p>Usuário Conectado: <strong id="nome-usuario-logado">Visitante</strong></p>
+        <nav>
+            <a href="index.html" id="link-inicio">Início</a>
+            <a href="login.html" id="link-login">Login</a>
+            
+            <div class="menu-container">
+                <a href="#" id="btn-sobre">Sobre ▼</a>
+                <div id="menu-vertical-sobre" class="menu-vertical">
+                    <a href="#" id="sublink-empresa">Empresa</a>
+                    <a href="#" id="sublink-clientes">Clientes</a>
+                </div>
+            </div>
+
+            <a href="cadastro.html" id="link-cadastro">Cadastre-se</a>
+
+            <div class="menu-container">
+                <a href="#" id="btn-contato">Contato ▼</a>
+                <div id="menu-vertical-contato" class="menu-vertical">
+                    <a href="#" id="sublink-telefone">Telefones</a>
+                    <a href="mailto:contato@livrariadamata.com?subject=Contato%20Livraria%20da%20Mata" id="sublink-email">E-mail (Outlook)</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Desapegar de um Livro</h2>
+            <p>Preencha os dados abaixo para disponibilizar seu livro para doação ou troca na comunidade:</p>
+            <form id="formLivroSebo">
+                <div class="form-group">
+                    <label for="nomeLivro">Nome do Livro:</label>
+                    <input type="text" id="nomeLivro" required placeholder="Digite o nome do livro">
+                </div>
+                <div class="form-group">
+                    <label for="autorLivro">Autor:</label>
+                    <input type="text" id="autorLivro" required placeholder="Digite o nome do autor">
+                </div>
+                <div class="form-group">
+                    <label for="estadoLivro">Estado de Conservação:</label>
+                    <select id="estadoLivro" required>
+                        <option value="">Selecione o estado</option>
+                        <option value="Novo / Excelente">Novo / Excelente</option>
+                        <option value="Bom estado">Bom estado</option>
+                        <option value="Usado / Velho">Usado / Velho</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="modalidadeLivro">Intenção (Modalidade):</label>
+                    <select id="modalidadeLivro" required>
+                        <option value="">Selecione a intenção</option>
+                        <option value="Troca">Quero Trocar</option>
+                        <option value="Doação">Quero Doar</option>
+                        <option value="Ambos">Aceito Troca ou Doação</option>
+                    </select>
+                </div>
+                <button type="submit">Anunciar Livro</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Livros Disponíveis na Comunidade</h2>
+            <p>Confira o acervo diversificado disponível para empréstimo, troca e doação:</p>
+
+            <div id="containerLivrosSebo">
+                <!-- TECNOLOGIA & COMPUTAÇÃO -->
+                <article>
+                    <h3>Código Limpo (Clean Code)</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> Tecnologia / Programação</li>
+                        <li><strong>Modalidade:</strong> Troca</li>
+                        <li><strong>Autor:</strong> Robert C. Martin</li>
+                        <li><strong>Estado:</strong> Novo / Excelente</li>
+                        <li><strong>Dono(a):</strong> Carlos Eduardo</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="Código Limpo">Propor Troca</button>
+                </article>
+
+                <article>
+                    <h3>Sistemas Operacionais Modernos</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> Tecnologia / Engenharia</li>
+                        <li><strong>Modalidade:</strong> Doação</li>
+                        <li><strong>Autor:</strong> Andrew S. Tanenbaum</li>
+                        <li><strong>Estado:</strong> Usado / Velho</li>
+                        <li><strong>Dono(a):</strong> Marina Costa</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="Sistemas Operacionais Modernos">Tenho Interesse</button>
+                </article>
+
+                <!-- CIÊNCIAS EXATAS & ENGENHARIA -->
+                <article>
+                    <h3>Cálculo - Volume 1</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> Matemática / Exatas</li>
+                        <li><strong>Modalidade:</strong> Troca</li>
+                        <li><strong>Autor:</strong> James Stewart</li>
+                        <li><strong>Estado:</strong> Bom estado</li>
+                        <li><strong>Dono(a):</strong> Bruno Henrique</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="Cálculo - Volume 1">Propor Troca</button>
+                </article>
+
+                <article>
+                    <h3>Fundamentos de Física: Mecânica</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> Física / Exatas</li>
+                        <li><strong>Modalidade:</strong> Doação</li>
+                        <li><strong>Autor:</strong> Halliday & Resnick</li>
+                        <li><strong>Estado:</strong> Usado / Velho</li>
+                        <li><strong>Dono(a):</strong> Rafael Nogueira</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="Fundamentos de Física">Tenho Interesse</button>
+                </article>
+
+                <!-- HISTÓRIA, SOCIOLOGIA & FILOSOFIA -->
+                <article>
+                    <h3>Sapiens: Uma Breve História da Humanidade</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> História / Antropologia</li>
+                        <li><strong>Modalidade:</strong> Troca</li>
+                        <li><strong>Autor:</strong> Yuval Noah Harari</li>
+                        <li><strong>Estado:</strong> Novo / Excelente</li>
+                        <li><strong>Dono(a):</strong> Amanda Vieira</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="Sapiens">Propor Troca</button>
+                </article>
+
+                <article>
+                    <h3>Mulheres, Raça e Classe</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> Sociologia / Filosofia</li>
+                        <li><strong>Modalidade:</strong> Doação</li>
+                        <li><strong>Autor:</strong> Angela Davis</li>
+                        <li><strong>Estado:</strong> Bom estado</li>
+                        <li><strong>Dono(a):</strong> Beatriz Lima</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="Mulheres, Raça e Classe">Tenho Interesse</button>
+                </article>
+
+                <!-- PSICOLOGIA & ECONOMIA -->
+                <article>
+                    <h3>Rápido e Devagar: Duas Formas de Pensar</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> Psicologia / Economia</li>
+                        <li><strong>Modalidade:</strong> Troca</li>
+                        <li><strong>Autor:</strong> Daniel Kahneman</li>
+                        <li><strong>Estado:</strong> Bom estado</li>
+                        <li><strong>Dono(a):</strong> Lucas Mendes</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="Rápido e Devagar">Propor Troca</button>
+                </article>
+
+                <article>
+                    <h3>A Psicologia Financeira</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> Finanças / Comportamento</li>
+                        <li><strong>Modalidade:</strong> Doação</li>
+                        <li><strong>Autor:</strong> Morgan Housel</li>
+                        <li><strong>Estado:</strong> Novo / Excelente</li>
+                        <li><strong>Dono(a):</strong> Camila Martins</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="A Psicologia Financeira">Tenho Interesse</button>
+                </article>
+
+                <!-- LITERATURA BRASILEIRA & CONTEMPORÂNEA -->
+                <article>
+                    <h3>Torto Arado</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> Literatura Brasileira</li>
+                        <li><strong>Modalidade:</strong> Troca</li>
+                        <li><strong>Autor:</strong> Itamar Vieira Junior</li>
+                        <li><strong>Estado:</strong> Novo / Excelente</li>
+                        <li><strong>Dono(a):</strong> Fernanda Souza</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="Torto Arado">Propor Troca</button>
+                </article>
+
+                <article>
+                    <h3>Capitães da Areia</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> Literatura Clássica</li>
+                        <li><strong>Modalidade:</strong> Doação</li>
+                        <li><strong>Autor:</strong> Jorge Amado</li>
+                        <li><strong>Estado:</strong> Bom estado</li>
+                        <li><strong>Dono(a):</strong> Gabriel Melo</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="Capitães da Areia">Tenho Interesse</button>
+                </article>
+
+                <!-- FICÇÃO CIENTÍFICA & FANTASIA -->
+                <article>
+                    <h3>Duna</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> Ficção Científica</li>
+                        <li><strong>Modalidade:</strong> Troca</li>
+                        <li><strong>Autor:</strong> Frank Herbert</li>
+                        <li><strong>Estado:</strong> Novo / Excelente</li>
+                        <li><strong>Dono(a):</strong> Mateus Rocha</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="Duna">Propor Troca</button>
+                </article>
+
+                <article>
+                    <h3>O Hobbit</h3>
+                    <ul>
+                        <li><strong>Modalidade:</strong> Doação</li>
+                        <li><strong>Área / Gênero:</strong> Fantasia</li>
+                        <li><strong>Autor:</strong> J.R.R. Tolkien</li>
+                        <li><strong>Estado:</strong> Bom estado</li>
+                        <li><strong>Dono(a):</strong> Pedro Santos</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="O Hobbit">Tenho Interesse</button>
+                </article>
+
+                <!-- ASTRONOMIA & DIVULGAÇÃO CIENTÍFICA -->
+                <article>
+                    <h3>Astrofísica para Apressados</h3>
+                    <ul>
+                        <li><strong>Área / Gênero:</strong> Astronomia / Ciência</li>
+                        <li><strong>Modalidade:</strong> Troca</li>
+                        <li><strong>Autor:</strong> Neil deGrasse Tyson</li>
+                        <li><strong>Estado:</strong> Bom estado</li>
+                        <li><strong>Dono(a):</strong> Sofia Oliveira</li>
+                    </ul>
+                    <button type="button" class="btn-interesse" data-livro="Astrofísica para Apressados">Propor Troca</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por: João Oliveira e Henrique da Mata</p>
+        <p>Data Atual: <span id="data-atual"></span> | Todos os direitos reservados. Livraria da Mata &copy; 2026.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
